@@ -1,7 +1,8 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const fetchGreet = createAsyncThunk('fetch/greeting', async (id) => {
-  const url = `https://wr88-hello-rails-back-end.herokuapp.com/greetings/${id}`;
+const fetchGreet = createAsyncThunk('fetch/greeting', async () => {
+  const url =
+    'https://wr88-hello-rails-back-end.herokuapp.com/greetings/random';
   const response = await fetch(url, { method: 'GET' });
   return response.json();
 });
