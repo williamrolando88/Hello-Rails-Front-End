@@ -1,9 +1,17 @@
-import { useState } from 'react';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Greeting from './components/Greeting';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <div>Hello world!</div>;
+  return (
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Greeting />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
